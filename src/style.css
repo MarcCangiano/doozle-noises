@@ -1,0 +1,37 @@
+html, body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+  background: #fdf6ec;
+  /* Small hands rest, drag and double-tap. None of that should scroll the
+     page, zoom, or pop a text-selection menu. */
+  touch-action: none;
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  overscroll-behavior: none;
+}
+
+canvas { display: block; width: 100%; height: 100%; }
+
+#start {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  pointer-events: none;
+  animation: breathe 2.4s ease-in-out infinite;
+}
+
+#start.gone { display: none; }
+
+@keyframes breathe {
+  0%, 100% { opacity: 0.5; transform: scale(1); }
+  50%      { opacity: 1;   transform: scale(1.08); }
+}
+
+/* Some children are sensitive to motion, and some parents have set this for a
+   reason. The toy still works: bubbles appear and fade without pulsing. */
+@media (prefers-reduced-motion: reduce) {
+  #start { animation: none; opacity: 0.8; }
+}

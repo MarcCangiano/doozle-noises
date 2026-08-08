@@ -1,0 +1,14 @@
+{
+  "name": "doozle-noises",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "A gentle sound toy for very small children. Touch anywhere.",
+  "scripts": {
+    "start": "npx --yes serve src",
+    "test": "vitest run"
+  },
+  "license": "MIT",
+  "author": "Marc Cangiano <me@marccangiano.com>",
+  "devDependencies": { "vitest": "^2.1.0" }
+}

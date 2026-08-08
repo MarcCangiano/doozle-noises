@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<title>Doozle Noises</title>
+<meta name="description" content="A gentle sound toy for very small children. Touch anywhere.">
+<meta name="theme-color" content="#fdf6ec">
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <canvas id="stage"></canvas>
+
+  <!-- Shown until the first touch, because browsers will not start audio
+       without one. No words: a hand, and it moves. -->
+  <div id="start" aria-hidden="true">
+    <svg viewBox="0 0 100 100" width="120" height="120" role="img" aria-label="Touch anywhere">
+      <circle cx="50" cy="50" r="30" fill="none" stroke="#e0b0a8" stroke-width="3"/>
+      <circle cx="50" cy="50" r="10" fill="#e0b0a8"/>
+    </svg>
+  </div>
+<script type="module" src="./app.js"></script>
+</body>
+</html>
